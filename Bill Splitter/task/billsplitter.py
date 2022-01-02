@@ -7,4 +7,9 @@ else:
     for _ in range(n):
         name = input()
         participants[name] = 0
+    # print(participants)
+    bill = int(input("Enter the total bill value:\n"))
+    rounded = round(bill / n, 2)
+    for key in participants:
+        participants[key] += rounded
     print(participants)
