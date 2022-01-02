@@ -55,5 +55,8 @@ files:
         BillSplitterTest().run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/12900#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 02 Jan 2022 11:39:09 UTC
 record: -1
