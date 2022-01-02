@@ -12,17 +12,18 @@ else:
     bill = int(input("Enter the total bill value:\n"))
     rounded = round(bill / n, 2)
     for person in participants:
-        participants[person] += rounded
+        participants[person] = rounded
     # print(participants)
-    feature_request = input('Do you want to use the "Who is lucky?" feature? Write Yes/No:\n')
+    feature_request = input('Do you want to use the "Who is lucky?" feature? Write Yes/No:\n').capitalize()
     if feature_request == "Yes":
         lucky = random.choice(list(participants))
         print(f"{lucky} is the lucky one!")
-        share_amount = participants[lucky]/n-1
+        updated_share = round(bill / (n-1), 2)
         for person in participants:
             if person == lucky:
                 participants[person] = 0
             else:
-                participants[person] += share_amount
+                participants[person] = updated_share
     else:
         print("No one is going to be lucky")
+    print(participants)
